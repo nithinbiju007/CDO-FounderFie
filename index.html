@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDO@FOUNDERFIE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="clocks.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.png">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- header design -->
+     <header class="header">
+        <a href="#" class="logo">Nithin Biju.</a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#skill">Skills</a>
+        </nav>
+     </header>
+    <!-- end of header design -->
+     <section class="home">
+        <section class="links">
+            <div class="home-sci">
+                <a href="#"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.linkedin.com/in/nithin-biju-268920303/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://www.instagram.com/zodia.c___/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+            </div>
+         </section>
+        <section class="child1">
+        <div class="home-content">
+            <h1>Hi, I'm Nithin Biju</h1>
+            <h3>Designer</h3>
+            <p>Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Sint fugiat, 
+            ullam officiis doloremque alias doloribus 
+            aliquam vitae tempora deleniti fugit unde 
+            dicta porro repellat maiores odit perferendis 
+            necessitatibus pariatur tempore.</p>
+            <div class="btn-box">
+                <a href="https://nithinbiju.is-a.dev/" target="_blank">Personal Site</a>
+                <a href="https://wa.me/+917736230808" target="_blank">Contact Me</a>
+            </div>
+        </div>
+        
+        
+        </section>
+        
+        <section class="child2">
+            <div class="wrapper">
+                <div class="display">
+                    <div id="time"></div>
+                </div>
+                <span></span>
+                <span></span>
+            </div>
+
+            <script>
+                setInterval(()=>{
+                const time = document.querySelector("#time");
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                let day_night = "AM";
+                if(hours > 12){
+                    day_night = "PM";
+                    hours = hours - 12;
+                }
+                if(hours < 10){
+                    hours = "0" + hours;
+                }
+                if(minutes < 10){
+                    minutes = "0" + minutes;
+                }
+                if(seconds < 10){
+                    seconds = "0" + seconds;
+                }
+                time.textContent = hours + ":" + minutes + ":" + seconds + " " + day_night;
+                });
+            </script>
+        </section>
+     </section>
+     
+    <!-- home section design -->
+    <!-- about section design -->
+    <!-- education section design -->
+    <!-- skills section design -->
+     <section class="skill" id="skill">
+        <div class="pic">
+            <!--<img src="img/img/me.png">-->
+        </div>
+        <div class="my-skill">
+            <div class="prbr">
+                <h1>Skills I Have</h1>
+                <li ><h3>Graphic Designing</h3>
+                <span class="bar"><span class="GD"></span></span>
+                </li>
+                <li ><h3>Editing</h3>
+                <span class="bar"><span class="E"></span></span>
+                </li>
+                <li ><h3>3D Animation</h3>
+                <span class="bar"><span class="DA"></span></span>
+                </li>
+                <li ><h3>Web Devoloping</h3>
+                <span class="bar"><span class="WD"></span></span>
+                </li>
+            </div>
+        </div>
+     </section>
+    <!-- contact section design -->
+    <!-- footer design -->
+    <script src="js/script.js"></script> 
+</body>
+</html>
