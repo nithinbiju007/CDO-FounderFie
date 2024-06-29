@@ -306,12 +306,12 @@ body {
 
 .GD {
     width: 90%;
-    animation: GD 3s;
+    animation: GD 5s;
 }
 
 .E {
     width: 90%;
-    animation: E 3s;
+    animation: E 2s;
 }
 
 .DA {
@@ -321,7 +321,7 @@ body {
 
 .WD {
     width: 80%;
-    animation: WD 3s;
+    animation: WD 4s;
 }
 
 @keyframes GD {
