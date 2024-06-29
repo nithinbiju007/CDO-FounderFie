@@ -16,6 +16,8 @@ body {
     color: #ededed;
 }
 
+/*head*/
+
 .header {
     position: fixed;
     top: 0;
@@ -47,6 +49,8 @@ body {
 .navbar a:hover {
     color: #00abf0;
 }
+
+/*logo*/
 
 .home {
     height: 100vh;
@@ -114,8 +118,12 @@ body {
     color: #00abf0;
 }
 
-.btn-box a:nth-child(2):hover {
+.btn-box a:nth-child(2):hover{
     color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #00abf0;
 }
 
 .btn-box a::before {
@@ -134,13 +142,9 @@ body {
     width: 100%;
 }
 
-.links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/*homelink*/
 
-.home-sci {
+/*.home-sci {
     position: absolute;
     bottom: 40px;
     width: 170px;
@@ -183,6 +187,61 @@ body {
 }
 
 .home-sci a:hover::before {
+    width: 100%;
+}
+
+/*linkss*/
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.linkss{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkss a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.linkss a:hover {
+    color: #081b29;
+}
+
+.linkss a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.linkss a:hover::before {
     width: 100%;
 }
 
@@ -316,19 +375,35 @@ body {
 .pic {
     width: 600px;
     height: 600px;
-    background: #353b48;
+    background: #030c20;
+}
+
+.space{
+    height: 0;
 }
 
 /* Media Queries */
-@media (max-width: 475px) {
+@media (width <= 475px) {
     .home {
         margin-top: 70px;
         flex-direction: column-reverse;
         row-gap: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
     .home-content h1 {
-        font-size: 40px;
+        font-size: 30px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 15px;
     }
 
     nav {
@@ -339,17 +414,23 @@ body {
         padding-top: 50px;
     }
 
-    .links{
-        padding-top: 60px;
-    }
-
-    .home-sci {
+    /*.home-sci {
         padding-top: 500px;
+    }*/
+
+    .space{
+        height: 100px;
     }
 
+    .links{
+        padding-top: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .skill {
         margin-top: 10px;
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: 1200px;
     }
 
@@ -358,7 +439,15 @@ body {
         height: 400px;
     }
 
+    .pic img{
+        width: 400px;
+        height: 400px;
+    }
+
     .my-skill {
         width: 400px;
     }
 }
+
+
+
